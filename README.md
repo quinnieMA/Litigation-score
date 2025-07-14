@@ -10,9 +10,7 @@ A robust NLP pipeline for document processing and semantic analysis with TF-IDF 
 - [Features](#features)
 - [Pipeline Architecture](#pipeline-architecture)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Outputs](#outputs)
-- [Contributing](#contributing)
+
 
 ## Features
 
