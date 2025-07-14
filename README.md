@@ -1,4 +1,4 @@
-# NLP Text Processing Pipeline
+# NLP Litgation scoring Pipeline
 
 ![Python](https://img.shields.io/badge/python-3.7%2B-blue)
 ![Gensim](https://img.shields.io/badge/gensim-4.0%2B-orange)
