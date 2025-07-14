@@ -1,29 +1,59 @@
 # NLP Text Processing Pipeline
 
-A comprehensive pipeline for text processing, feature extraction, and semantic analysis using TF-IDF and Word2Vec.
+![Python](https://img.shields.io/badge/python-3.7%2B-blue)
+![Gensim](https://img.shields.io/badge/gensim-4.0%2B-orange)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.0%2B-yellowgreen)
 
-## Project Overview
+A robust NLP pipeline for document processing and semantic analysis with TF-IDF and Word2Vec embeddings.
 
-This project implements a complete NLP workflow that:
-1. Processes raw text documents
-2. Computes TF-IDF weights
-3. Trains Word2Vec embeddings
-4. Performs semantic similarity analysis
-5. Generates document-level scores based on seed words
+## Table of Contents
+- [Features](#features)
+- [Pipeline Architecture](#pipeline-architecture)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Outputs](#outputs)
+- [Contributing](#contributing)
 
-## Key Features
+## Features
 
-- **Text Preprocessing**:
-  - Punctuation removal
-  - Stopword filtering
-  - Document cleaning
+### Text Processing
+- ✔️ Automated text cleaning pipeline  
+- ✔️ Customizable stopword filtering  
+- ✔️ Punctuation and special character removal  
 
-- **Feature Extraction**:
-  - TF-IDF vectorization
-  - Word2Vec embedding training
-  - Vocabulary management
+### Feature Extraction
+- 🎯 TF-IDF vectorization with scikit-learn  
+- 🎯 Word2Vec embedding training  
+- 🎛️ Configurable hyperparameters via `global_options.py`  
 
-- **Semantic Analysis**:
-  - Seed word expansion
-  - Word similarity calculations
-  - Document scoring
+### Semantic Analysis
+- 🔍 Seed word similarity scoring  
+- 📊 Document-level semantic profiling  
+- 💾 Results export to CSV  
+
+## Pipeline Architecture
+
+```text
+text_processing_pipeline/
+│
+├── data/
+│   ├── input/                  # Raw documents (.txt)
+│   ├── processed/              # Cleaned text and intermediate files
+│   └── dictionaries/           # Seed words and stopwords
+│
+├── models/                     # Serialized Word2Vec models
+│   └── word_vectors.kv         # Pretrained embeddings
+│
+├── outputs/
+│   ├── word_similarities/      # Per-seed-word similarity scores
+│   └── df_listscore.csv     # Final aggregated scores
+│
+├── config/
+│   └── global_options.py       # Path configurations
+│
+└── scripts/                    # Processing modules
+    ├── NER_pipeline.py
+    ├── preprocessing.py
+    ├── ML.py
+    ├── feature_engineering.py
+    └── litigation_score_final.py
